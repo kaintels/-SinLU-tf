@@ -10,8 +10,3 @@ class SinLU(layers.Layer):
 
     def call(self, x):
         return (x+self.a*tf.sin(self.b*x))*tf.sigmoid(x)
-
-
-layer = SinLU()
-
-print(layer(tf.random.uniform([1, 10, 1])))
